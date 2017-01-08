@@ -1,0 +1,35 @@
+1. Using Pandas To Find Patterns In The Data:-
+
+In order to explore any interesting patterns here, we can use Series.value_counts() to find unique values in each column. This will tell us how many schools are juvenile justice facilities or magnet schools.
+
+We can also count up how many students are in juvenile justice facilities by building a pivot table using the pandas.pivot_table() function. The pivot table will allow us to aggregate TOT_ENR_M, and TOT_ENR_F, which contain the total enrollment in the school of men and women, by JJ and SCH_STATUS_MAGNET. This will count up how many students are in magnet schools, or in juvenile justice facilities.
+
+The output pivot table of division of Juvenile Justice (JJ) based on gender is given below:-
+
+	TOT_ENR_F	  TOT_ENR_M
+JJ
+NO	252915		266702
+YES	71		    427
+
+
+2. Using Pandas To Explore Enrollment By Race:-
+
+There are several columns in the data that indicate school attributes broken down by race and gender. 
+These start with the attribute name, like SCH_ENR, which indicates school enrollment. They then add a racial codename, like BL. Finally, they add a gender codename, like F. To put our example together, we get SCH_ENR_HI_F, which is hispanic female enrollment in the school.
+
+The proportion of total enrolled students based on gender and race that I found is given below:-
+
+    hispanic_male                   - 0.134426040395
+    hispanic_female                 - 0.127152648933
+    native_american_male            - 0.00725031964085
+    native_american_female          - 0.00689847437586
+    asian_male                      - 0.0257404612441
+    asian_female                    - 0.0246964613595
+    hawain_pacific_islander_male    - 0.00180536996626
+    hawain_pacific_islander_female  - 0.00188419868683
+    black_male                      - 0.072085980985
+    black_female                    - 0.0691212520308
+    white_male                      - 0.257075838997
+    white_female                    - 0.2413850783 
+    two_or_more_races_male          - 0.0152120204186
+    two_or_more_races_female        - 0.0152658546668
